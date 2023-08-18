@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Arc To Example</title>
+    </head>
+
+    <body>
+        <canvas id="mycanvas" height="600px" width="600px" ></canvas>
+
+        <script>
+            can = document.getElementById("mycanvas");
+
+            ctx = can.getContext("2d");
+
+            ctx.beginPath();
+
+            // arcTo(m-x , m-y , r , e-x , e-y)
+            ctx.moveTo(250,200);
+            ctx.lineTo(350,200)
+            ctx.arcTo(400,200  , 400,250,50)
+            ctx.lineTo(400,350);
+            ctx.arcTo(400,400 , 350,400,50)
+            ctx.lineTo(250,400);
+            ctx.arcTo(200,400 , 200,350,50)
+            ctx.lineTo(200,250);
+            ctx.arcTo(200,200 , 250,200,50)
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+
+            ctx.lineWidth=10;
+            ctx.strokeStyle="blue";
+            ctx.moveTo(20, 20);
+            ctx.bezierCurveTo(20, 100, 400, 100, 130, 200);
+            ctx.stroke();
+            ctx.closePath();
+
+
+            ctx.fillStyle="red";
+            ctx.font = "bold 80px verdana ";
+            ctx.fillText("Jadavpur",100,300);
+            ctx.closepath();
+        </script>
+    </body>
+</html>

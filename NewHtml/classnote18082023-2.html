@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Gradient Example</title>
+    </head>
+    <body>
+
+        <canvas id="can" height="500px" width="500px" ></canvas>
+
+        <script>
+            can = document.getElementById("can");
+
+            ctx = can.getContext("2d");
+
+            grad = ctx.createLinearGradient(0,0 , 300,300);
+            grad.addColorStop(0,"red");
+            grad.addColorStop("0.25","orange");
+            grad.addColorStop("0.5","yellow");
+            grad.addColorStop("0.75","green");
+
+            ctx.fillStyle=grad;
+            ctx.rect(0,0,300,100);
+            ctx.fill();
+
+            ctx.font="bold 80px verdana";
+            ctx.fillText("JADAVPUR",20,200);
+            
+           
+
+        </script>
+    </body>
+</html>

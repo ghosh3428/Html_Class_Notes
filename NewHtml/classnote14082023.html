@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Canvas Example</title>
+</head>
+
+<body>
+    <canvas style="background-color: salmon;" height="500px" width="500px" id="mycanvas">
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById("mycanvas");
+        var ctx = canvas.getContext("2d");
+
+        x = 50;
+        y = 50;
+
+        while (y <= 400) {
+            x = 50;
+            while (x <= 400) {
+                ctx.fillStyle = "white";
+                ctx.fillRect(x, y, 50, 50);
+                x = x + 50
+
+                ctx.fillStyle = "black";
+                ctx.fillRect(x, y, 50, 50);
+                x = x + 50
+            }
+
+            y = y + 50
+            x = 50
+            while (x <= 400) {
+                ctx.fillStyle = "black";
+                ctx.fillRect(x, y, 50, 50);
+                x = x + 50
+
+                ctx.fillStyle = "white";
+                ctx.fillRect(x, y, 50, 50);
+                x = x + 50
+            }
+            y = y + 50
+        }
+    </script>
+</body>
+
+</html>

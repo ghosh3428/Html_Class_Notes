@@ -1,0 +1,44 @@
+#Circle&Smilie.html
+<html>
+    <head>
+        <title>Canvas Example 101</title>
+    </head>
+    <body>
+        <canvas id="mycanvas" height="500px" width="500px" style="background-color:yellow;" ></canvas>
+
+        <script>
+            can = document.getElementById("mycanvas");
+            ctx = can.getContext("2d");
+
+            
+            ctx.lineWidth = 10;
+            ctx.beginPath();
+            ctx.arc(250,250 , 150 ,0, 6.28 ,false);
+            ctx.stroke();
+           ctx.closePath();
+
+            ctx.beginPath();
+            ctx.arc(200,200 , 20 ,0, 6.28 ,false);
+            ctx.lineWidth = 5;
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.arc(300,200 , 20 ,0, 6.28 ,false);
+            ctx.lineWidth = 5;
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.arc(250,300 , 70 ,0, 3.14 ,false);
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            ctx.closePath();
+
+
+
+
+        </script>
+
+    </body>
+</html>

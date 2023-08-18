@@ -1,0 +1,36 @@
+#Triangle.html
+<html>
+
+<head>
+    <title>Canvas Example 101</title>
+</head>
+
+<body>
+    <canvas id="mycanvas" height="500px" width="500px" style="background-color: red;"></canvas>
+
+    <script>
+        can = document.getElementById("mycanvas");
+        ctx = can.getContext("2d");
+
+
+
+        ctx.beginPath();
+
+        ctx.moveTo(300,100);
+        ctx.lineTo(450,300);
+        ctx.lineTo(150,300);
+        ctx.lineTo(300,100);
+        ctx.fill();
+        ctx.closePath();
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

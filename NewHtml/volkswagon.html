@@ -1,0 +1,51 @@
+#Volkswagon.html
+<html>
+
+<head>
+    <title>Canvas Example 101</title>
+</head>
+
+<body>
+    <canvas id="mycanvas" height="500px" width="500px" style="background-color:antiquewhite;"></canvas>
+
+    <script>
+        can = document.getElementById("mycanvas");
+        ctx = can.getContext("2d");
+
+
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.arc(250, 250, 150, 0, 6.28, false);
+        ctx.stroke();
+        ctx.closePath();
+
+
+        ctx.beginPath();
+        ctx.lineWidth = 15;
+        ctx.moveTo(360, 151);
+        ctx.lineTo(300, 350);
+        ctx.lineTo(260, 250);
+        ctx.lineTo(245, 250);
+        ctx.lineTo(200, 350);
+        ctx.lineTo(140, 151);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.lineWidth = 15;
+        ctx.moveTo(300, 112);
+        ctx.lineTo(260, 220);
+        ctx.lineTo(240, 220);
+        ctx.lineTo(200, 112);
+        ctx.stroke();
+        ctx.closePath();
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

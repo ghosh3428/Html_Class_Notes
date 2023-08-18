@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Gradient Example</title>
+</head>
+
+<body>
+
+    <canvas id="can" height="500px" width="500px"></canvas>
+
+    <script>
+        const c = document.getElementById("can");
+        const ctx = c.getContext("2d");
+
+        // Create gradient
+        const grd = ctx.createRadialGradient(175, 150, 25, 190, 160, 100);
+        grd.addColorStop(0, "red");
+        grd.addColorStop("0.25", "green");
+        grd.addColorStop("0.5", "yellow");
+        grd.addColorStop(1, "blue");
+
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 350, 280);
+
+
+    </script>
+</body>
+
+</html>
