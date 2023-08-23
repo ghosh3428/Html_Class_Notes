@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>
+        JavaScript Example
+    </title>
+    <link href="bootstrap.css" rel="stylesheet">
+    </link>
+    <script>
+        var operator = '+';
+        var first = 0;
+        var second = 0;
+        function setText(text) {
+            num = document.getElementById("input").value;
+
+            if (parseInt(text) == 0 && num.length == 0) {
+            }
+            else {
+                if (num.length < 10)
+                    document.getElementById("input").value = num + text;
+            }
+        }
+        function setOperator(op) {
+            first = parseInt(document.getElementById("input").value);
+            operator = op;
+            document.getElementById("input").value = "";
+        }
+
+        function cl() {
+            document.getElementById("input").value = "";
+        }
+
+        function calculate() {
+            second = parseInt(document.getElementById("input").value);
+            result = 0;
+            switch (operator) {
+                case '+':
+                    result = first + second;
+                    break;
+                case '-':
+                    result = first - second;
+                    break;
+                case '*':
+                    result = first * second;
+                    break;
+                case '/':
+                    result = first / second;
+                    break;
+            }
+
+            document.getElementById("input").value = result;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="fs-1 text-center">CALCULATOR</h1>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <input class="form-control fs-2 border border-secondary" disabled id="input" />
+                </div>
+                <br />
+                <div class="row">
+                    <button class="col fs-2 btn btn-outline-danger" onclick="setText(7)">7</button>
+                    <button class="col fs-2 btn btn-outline-danger" onclick="setText(8)">8</button>
+                    <button class="col fs-2 btn btn-outline-danger" onclick="setText(9)">9</button>
+                    <button class="col fs-2 btn btn-outline-primary" onclick="setOperator('+')">+</button>
+                </div>
+                <div class="row">
+                    <button class="col fs-2 btn btn-outline-danger" onclick="setText(4)">4</button>
+                    <button class="col fs-2 btn btn-outline-danger" onclick="setText(5)">5</button>
+                    <button class="col fs-2 btn btn-outline-danger" onclick="setText(6)">6</button>
+                    <button class="col fs-2 btn btn-outline-primary" onclick="setOperator('-')">-</button>
+                </div>
+                <div class="row">
+                    <button class="col fs-2 btn btn-outline-danger" onclick="setText(1)">1</button>
+                    <button class="col fs-2 btn btn-outline-danger" onclick="setText(2)">2</button>
+                    <button class="col fs-2 btn btn-outline-danger" onclick="setText(3)">3</button>
+                    <button class="col fs-2 btn btn-outline-primary" onclick="setOperator('/')">/</button>
+                </div>
+                <div class="row">
+                    <button class="col fs-2 btn btn-outline-warning" onclick="cl()">DEL</button>
+                    <button class="col fs-2 btn btn-outline-danger" onclick="setText(0)">0</button>
+                    <button class="col fs-2 btn btn-outline-success" onclick="calculate()">=</button>
+                    <button class="col fs-2 btn btn-outline-primary" onclick="setOperator('*')">*</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
