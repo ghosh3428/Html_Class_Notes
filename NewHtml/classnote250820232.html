@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Student Registration Form</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script>
+       fn = document.getElementById("firstName").value;
+
+       if(fn == null || fn == "")
+       {
+            document.getElementById("register").false;
+       }
+    </script>
+    
+</head>
+
+<body>
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h2>
+                            <form>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-outline">
+                                            <input type="text" id="firstName" class="form-control form-control-lg" />
+                                            <label class="form-label" for="firstName"><b>First Name</b></label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-outline">
+                                            <input type="text" id="lastName" class="form-control form-control-lg" />
+                                            <label class="form-label" for="lastName"><b>Last Name</b></label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                        <div class="form-outline datepicker w-100">
+                                            <input type="number" class="form-control form-control-lg"
+                                                id="birthdayDate"required minlength="4" maxlength="8" size="10"" />
+                                            <label for="birthdayDate" class="form-label"><b>Age in Years</b></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+                                        <h6 class="mb-2 pb-1"><b>Gender:</b></h6>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="femaleGender" value="option1" checked />
+                                            <label class="form-check-label" for="femaleGender">Female</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="maleGender" value="option2" />
+                                            <label class="form-check-label" for="maleGender">Male</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="otherGender" value="option3" />
+                                            <label class="form-check-label" for="otherGender">Other</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4 pb-2">
+
+                                        <div class="form-outline">
+                                            <input type="email" id="emailAddress"
+                                                class="form-control form-control-lg" />
+                                            <label class="form-label" for="emailAddress"><b>Email</b></label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4 pb-2">
+
+                                        <div class="form-outline">
+                                            <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                                            <label class="form-label" for="phoneNumber"><b>Phone Number</b></label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+
+                                        <select class="select form-control-lg">
+                                            <option disabled>Choose Section</option>
+                                            <option value="1">Section A</option>
+                                            <option value="2">Section B</option>
+                                            <option value="3">Section C</option>
+                                        </select>
+                                        <label class="form-label select-label"><b>Choose Section</b></label>
+
+                                    </div>
+
+                                    <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                        <div class="form-outline datepicker w-100">
+                                            <input type="number" class="form-control form-control-lg"
+                                                id="birthdayDate" />
+                                            <label for="birthdayDate" class="form-label"><b>Class</b></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+
+                                            <select class="select form-control-lg">
+                                                <option disabled>Choose Subject</option>
+                                                <option value="1">English</option>
+                                                <option value="1">Bengali</option>
+                                                <option value="1">Math</option>
+                                                <option value="1">Physical Science</option>
+                                                <option value="1">Life Science</option>
+                                                <option value="1">History</option>
+                                                <option value="1">Geography</option>
+                                            </select>
+                                            <label class="form-label select-label"><b>Choose Subject</b></label>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-outline">
+                                                <input type="number" id="emailAddress"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="emailAddress"><b>Number</b></label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+
+                                            <select class="select form-control-lg">
+                                                <option disabled>Choose Subject</option>
+                                                <option value="1">English</option>
+                                                <option value="1">Bengali</option>
+                                                <option value="1">Math</option>
+                                                <option value="1">Physical Science</option>
+                                                <option value="1">Life Science</option>
+                                                <option value="1">History</option>
+                                                <option value="1">Geography</option>
+                                            </select>
+                                            <label class="form-label select-label"><b>Choose Subject</b></label>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-outline">
+                                                <input type="number" id="emailAddress"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="emailAddress"><b>Number</b></label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-6">
+
+                                            <select class="select form-control-lg">
+                                                <option disabled>Choose Subject</option>
+                                                <option value="1">English</option>
+                                                <option value="1">Bengali</option>
+                                                <option value="1">Math</option>
+                                                <option value="1">Physical Science</option>
+                                                <option value="1">Life Science</option>
+                                                <option value="1">History</option>
+                                                <option value="1">Geography</option>
+                                            </select>
+                                            <label class="form-label select-label"><b>Choose Subject</b></label>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-outline">
+                                                <input type="number" id="emailAddress"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="emailAddress"><b>Number</b></label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+
+                                            <select class="select form-control-lg">
+                                                <option value="1" disabled>Choose Subject</option>
+                                                <option value="2">English</option>
+                                                <option value="3">Bengali</option>
+                                                <option value="4">Math</option>
+                                                <option value="5">Physical Science</option>
+                                                <option value="6">Life Science</option>
+                                                <option value="7">History</option>
+                                                <option value="8">Geography</option>
+                                            </select>
+                                            <label class="form-label select-label"><b>Choose Subject</b></label>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-outline">
+                                                <input type="number" id="emailAddress"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="emailAddress"><b>Number</b></label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+
+                                            <select class="select form-control-lg">
+                                                <option disabled>Choose Subject</option>
+                                                <option value="1">English</option>
+                                                <option value="2">Bengali</option>
+                                                <option value="3">Math</option>
+                                                <option value="1">Physical Science</option>
+                                                <option value="1">Life Science</option>
+                                                <option value="1">History</option>
+                                                <option value="1">Geography</option>
+                                            </select>
+                                            <label class="form-label select-label"><b>Choose Subject</b></label>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-outline">
+                                                <input type="number" id="emailAddress"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="emailAddress"><b>Number</b></label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+
+                                            <select class="select form-control-lg">
+                                                <option disabled>Choose Subject</option>
+                                                <option value="1">English</option>
+                                                <option value="2">Bengali</option>
+                                                <option value="3">Math</option>
+                                                <option value="1">Physical Science</option>
+                                                <option value="1">Life Science</option>
+                                                <option value="1">History</option>
+                                                <option value="1">Geography</option>
+                                            </select>
+                                            <label class="form-label select-label"><b>Choose Subject</b></label>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-outline">
+                                                <input type="number" id="emailAddress"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="emailAddress"><b>Number</b></label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+
+                                            <select class="select form-control-lg">
+                                                <option disabled>Choose Subject</option>
+                                                <option value="1">English</option>
+                                                <option value="2">Bengali</option>
+                                                <option value="3">Math</option>
+                                                <option value="1">Physical Science</option>
+                                                <option value="1">Life Science</option>
+                                                <option value="1">History</option>
+                                                <option value="1">Geography</option>
+                                            </select>
+                                            <label class="form-label select-label"><b>Choose Subject</b></label>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-outline">
+                                                <input type="number" id="emailAddress"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="emailAddress"><b>Number</b></label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <div class="form-outline">
+                                                <input type="text" id="login"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="login"><b>Login Id</b></label>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <div class="form-outline">
+                                                <input type="tel" id="pass"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="pass"><b>Password</b></label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4 pt-2">
+                                        <input class="btn btn-primary btn-lg" type="submit" value="Submit" id="register" />
+                                    </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

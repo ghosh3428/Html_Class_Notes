@@ -1,0 +1,314 @@
+<html>
+
+<head>
+    <link href="bootstrap.css" rel="stylesheet">
+    </link>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="fs-1 text-center bg-primary text-light">REGISTRATION FORM</h1>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <label class="col-md-3 fs-2">First Name :</label>
+                    <div class="col-md-7">
+                        <input class="form-control fs-2 border border-secondary" id="f_name" /><br>
+                    </div>
+                    <h6 class="col-md-2"></h6>
+                    <label class="col-md-3 fs-2">Last Name :</label>
+                    <div class="col-md-7">
+                        <input class="form-control fs-2 border border-secondary" id="l_name" /><br>
+                    </div>
+                    <h6 class="col-md-2"></h6>
+                    <label class="col-md-3 fs-2">Age :</label>
+                    <div class="col-md-7">
+                        <input class="form-control fs-2 border border-secondary" id="age" onblur="check('age')" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="age_error"></h6>
+                    <label class="col-md-3 fs-2">Email ID :</label>
+                    <div class="col-md-7">
+                        <input class="form-control fs-2 border border-secondary" id="email" /><br>
+                    </div>
+                    <h6 class="col-md-2"></h6>
+                    <label class="col-md-3 fs-2">Class :</label>
+                    <div class="col-md-7">
+                        <input onblur="check('s_class')" class="form-control fs-2 border border-secondary"
+                            id="s_class" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="class_error"></h6>
+                    <label class="col-md-3 fs-2">Section :</label>
+                    <div class="col-md-7">
+                        <input onblur="check('section')" class="form-control fs-2 border border-secondary"
+                            id="section" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="section_error"></h6>
+                    <label class="col-md-3 fs-2">English :</label>
+                    <div class="col-md-7">
+                        <input onblur="check('eng')" class="form-control fs-2 border border-secondary" id="eng" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="eng_error"></h6>
+                    <label class="col-md-3 fs-2">Bengali :</label>
+                    <div class="col-md-7">
+                        <input onblur="check('bng')" class="form-control fs-2 border border-secondary" id="bng" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="bng_error"></h6>
+                    <label class="col-md-3 fs-2">Science :</label>
+                    <div class="col-md-7">
+                        <input onblur="check('sci')" class="form-control fs-2 border border-secondary" id="sci" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="sci_error"></h6>
+                    <label class="col-md-3 fs-2">Mathematics :</label>
+                    <div class="col-md-7">
+                        <input onblur="check('maths')" class="form-control fs-2 border border-secondary"
+                            id="maths" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="math_error"></h6>
+                    <label class="col-md-3 fs-2">Computer :</label>
+                    <div class="col-md-7">
+                        <input onblur="check('comp')" class="form-control fs-2 border border-secondary" id="comp" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="comp_error"></h6>
+                    <label class="col-md-3 fs-2">Login ID :</label>
+                    <div class="col-md-7">
+                        <input class="form-control fs-2 border border-secondary" id="l_id" /><br>
+                    </div>
+                    <h6 class="col-md-2"></h6>
+                    <label class="col-md-3 fs-2">Password :</label>
+                    <div class="col-md-7">
+                        <input onblur="check('pass')" type="password" class="form-control fs-2 border border-secondary"
+                            id="pass" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="password_error"></h6>
+                    <label class="col-md-3 fs-2">Confirm Password :</label>
+                    <div class="col-md-7">
+                        <input onblur="check('c_pass')" type="password"
+                            class="form-control fs-2 border border-secondary" id="c_pass" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="pass_error"></h6>
+                    <div class=" offset-md-5 col-md-1">
+                        <button class="col fs-2 btn btn-primary text-light text-center" onclick="validation()"
+                            id="register">REGISTER</button><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /*
+        a = "niit"
+        if(a[0] >= 'A' && a[0]<='Z')
+        {
+            alert("yes");
+        }
+        else
+        {
+            alert("no");
+        }
+        */
+        var va = 0;
+        var vc = 0;
+        var vs = 0;
+        var vm = 0;
+        var vco = 0;
+        var vsc = 0;
+        var ve = 0;
+        var vb = 0;
+        var vp = 0;
+        var vcp = 0;
+
+
+        function marksCheck(num) {
+            if (num < 0 || num > 100) {
+                return 0;
+            }
+            else {
+                return 1;
+            }
+        }
+
+        function check(p_name) {
+
+            ref = document.getElementById(p_name).value;
+            if (p_name == "age") {
+                if (ref == null || ref == "") {
+                    document.getElementById("age_error").innerHTML = "Age Cannot be empty";
+                    document.getElementById(p_name).focus();
+                    va = 0;
+                }
+                else if (parseInt(ref) < 12 || parseInt(ref) > 17) {
+                    document.getElementById("age_error").innerHTML = "Age must be between 12 and 17.";
+                    document.getElementById(p_name).focus();
+                    va = 0;
+                }
+                else {
+                    va = 1;
+                    document.getElementById("age_error").innerHTML = "";
+                }
+            }
+            else if (p_name == "s_class") {
+                if (ref == null || ref == "") {
+                    document.getElementById("class_error").innerHTML = "Class Cannot be empty";
+                    document.getElementById(p_name).focus();
+                    vc = 0;
+                }
+                else if (parseInt(ref) < 8 || parseInt(ref) > 12) {
+                    document.getElementById("class_error").innerHTML = "Class must be between 8 and 12.";
+                    document.getElementById(p_name).focus();
+                    vc = 0;
+                }
+                else {
+                    vc = 1;
+                    document.getElementById("class_error").innerHTML = "";
+                }
+            }
+            else if (p_name == "section") {
+                if (ref == null || ref == "") {
+                    document.getElementById("section_error").innerHTML = "Section Cannot be empty";
+                    document.getElementById(p_name).focus();
+                    vs = 0;
+                }
+                else if (ref != "A" && ref != "B" && ref != "C") {
+                    document.getElementById("section_error").innerHTML = "Section must be 'A' or 'B' or 'C'";
+                    document.getElementById(p_name).focus();
+                    vs = 0;
+                }
+                else {
+                    vs = 1;
+                    document.getElementById("section_error").innerHTML = "";
+                }
+            }
+            else if (p_name == "maths") {
+                if (ref == null || ref == "") {
+                    document.getElementById("math_error").innerHTML = "Maths Marks Cannot be empty";
+                    document.getElementById(p_name).focus();
+                    vm = 0;
+                }
+                else if (marksCheck(parseInt(ref)) == 0) {
+                    document.getElementById("math_error").innerHTML = "Maths Marks must be between 0 and 100";
+                    document.getElementById(p_name).focus();
+                    vm = 0;
+                }
+                else {
+                    vm = 1;
+                    document.getElementById("math_error").innerHTML = "";
+                }
+            }
+            else if (p_name == "eng") {
+                if (ref == null || ref == "") {
+                    document.getElementById("eng_error").innerHTML = "English Marks Cannot be empty";
+                    document.getElementById(p_name).focus();
+                    ve = 0;
+                }
+                else if (marksCheck(parseInt(ref)) == 0) {
+                    document.getElementById("eng_error").innerHTML = "English Marks must be between 0 and 100";
+                    document.getElementById(p_name).focus();
+                    ve = 0;
+                }
+                else {
+                    ve = 1;
+                    document.getElementById("eng_error").innerHTML = "";
+                }
+            }
+            else if (p_name == "bng") {
+                if (ref == null || ref == "") {
+                    document.getElementById("bng_error").innerHTML = "Bengali Marks Cannot be empty";
+                    document.getElementById(p_name).focus();
+                    vb = 0;
+                }
+                else if (marksCheck(parseInt(ref)) == 0) {
+                    document.getElementById("bng_error").innerHTML = "Bengali Marks must be between 0 and 100";
+                    document.getElementById(p_name).focus();
+                    vb = 0;
+                }
+                else {
+                    vb = 1;
+                    document.getElementById("bng_error").innerHTML = "";
+                }
+            }
+            else if (p_name == "comp") {
+                if (ref == null || ref == "") {
+                    document.getElementById("comp_error").innerHTML = "Computer Marks Cannot be empty";
+                    document.getElementById(p_name).focus();
+                    vco = 0;
+                }
+                else if (marksCheck(parseInt(ref)) == 0) {
+                    document.getElementById("comp_error").innerHTML = "Computer Marks must be between 0 and 100";
+                    document.getElementById(p_name).focus();
+                    vco = 0;
+                }
+                else {
+                    vco = 1;
+                    document.getElementById("comp_error").innerHTML = "";
+                }
+            }
+            else if (p_name == "sci") {
+                if (ref == null || ref == "") {
+                    document.getElementById("sci_error").innerHTML = "Science Marks Cannot be empty";
+                    document.getElementById(p_name).focus();
+                    vsc = 0;
+                }
+                else if (marksCheck(parseInt(ref)) == 0) {
+                    document.getElementById("sci_error").innerHTML = "Science Marks must be between 0 and 100";
+                    document.getElementById(p_name).focus();
+                    vsc = 0;
+                }
+                else {
+                    vsc = 1;
+                    document.getElementById("sci_error").innerHTML = "";
+                }
+            }
+            else if (p_name == "pass") {
+                if (ref == null || ref == "") {
+                    document.getElementById("password_error").innerHTML = "Password Cannot be empty";
+                    document.getElementById(p_name).focus();
+                    vp = 0;
+                }
+                else if (ref.length < 8 || ref.length > 15) {
+                    document.getElementById("password_error").innerHTML = "Length of password must be between 8 and 15";
+                    document.getElementById(p_name).focus();
+                    vp = 0;
+                }
+                else {
+                    vp = 1;
+                    document.getElementById("password_error").innerHTML = "";
+                }
+            }
+            else if (p_name == "c_pass") {
+                if (ref == null || ref == "") {
+                    document.getElementById("pass_error").innerHTML = "Confirm Password Cannot be empty";
+                    document.getElementById(p_name).focus();
+                    vcp = 0;
+                }
+                else if (ref != document.getElementById('pass').value) {
+                    document.getElementById("pass_error").innerHTML = "Confirm Password Does Not Match";
+                    document.getElementById(p_name).focus();
+                    vcp = 0;
+                }
+                else {
+                    vcp = 1;
+                    document.getElementById("pass_error").innerHTML = "";
+                }
+            }
+            checkvalid();
+        }
+
+        function checkvalid() {
+            if (va == 0 || vc == 0 || vs == 0 || vm == 0 || vco == 0 || vsc == 0 || ve == 0 || vb == 0 || vp == 0 || vcp == 0) {
+                document.getElementById("register").disabled = true;
+            }
+            else {
+                document.getElementById("register").disabled = false;
+            }
+        }
+
+        checkvalid();
+    </script>
+</body>
+
+</html>
