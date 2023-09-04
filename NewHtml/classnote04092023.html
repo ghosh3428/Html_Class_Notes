@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <link href="bootstrap.css" rel="stylesheet">
+    </link>
+
+    <script src="jquery.js"></script>
+
+</head>
+
+<body>
+
+    <div style="height:400px ; width:400px; background-color: red; font-size:30px">
+        SAMPLE TEXT
+    </div>
+    <script>
+        $("div").mouseenter(
+            function()
+            {
+                $("div").animate(
+                    {
+                        backgroundColor:'#3344FF',
+                        width:'800px',
+                        color: '#FDFEFE',
+                        "font-size":'40px',
+                        height:'200px',
+                        
+                    },800
+                )
+            }
+        );
+
+        $("div").mouseleave(
+            function()
+            {
+                $("div").animate(
+                    {
+                        width:'400px',
+                        color: 'black',
+                        fontSize:'30px',
+                        height:'400px'
+                    }
+                )
+            }
+        );
+    </script>
+</body>
+
+</html>

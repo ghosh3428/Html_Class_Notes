@@ -1,0 +1,126 @@
+
+<html>
+
+<head>
+    <link href="bootstrap.css" rel="stylesheet">
+    </link>
+    <style>
+        span
+        {
+            color:red;
+            font-size:40px;
+        }
+
+        
+    </style>
+
+    <script src="jquery.js" ></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="fs-1 text-center bg-primary text-light">REGISTRATION FORM</h1>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 fs-2">
+                        <span >*</span>
+                        <label class="">First Name :</label>
+                        
+                    </div>
+                    <div class="col-md-7">
+                        <input class="form-control fs-2 border border-secondary" id="f_name" />
+                        <br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="name_error"></h6>
+                    <label class="col-md-3 fs-2">Last Name :</label>
+                    <div class="col-md-7">
+                        <input class="form-control fs-2 border border-secondary" id="l_name" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="lname_error"></h6>
+                    <label class="col-md-3 fs-2">Age :</label>
+                    <div class="col-md-7">
+                        <input class="form-control fs-2 border border-secondary" id="age" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="age_error"></h6>
+                    <label class="col-md-3 fs-2">Email ID :</label>
+                    <div class="col-md-7">
+                        <input class="form-control fs-2 border border-secondary" id="email" /><br>
+                    </div>
+                    <h6 class="col-md-2" id="email_error"></h6>
+                    <label class="col-md-3 fs-2">Class :</label>
+                    <div class="col-md-7">
+                        <input  class="form-control fs-2 border border-secondary"
+                            id="s_class" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="class_error"></h6>
+                    <label class="col-md-3 fs-2">Section :</label>
+                    <div class="col-md-7">
+                        <input  class="form-control fs-2 border border-secondary"
+                            id="section" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="section_error"></h6>
+                    <label class="col-md-3 fs-2">English :</label>
+                    <div class="col-md-7">
+                        <input  class="form-control fs-2 border border-secondary" id="eng" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="eng_error"></h6>
+                    <label class="col-md-3 fs-2">Bengali :</label>
+                    <div class="col-md-7">
+                        <input  class="form-control fs-2 border border-secondary" id="bng" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="bng_error"></h6>
+                    <label class="col-md-3 fs-2">Science :</label>
+                    <div class="col-md-7">
+                        <input  class="form-control fs-2 border border-secondary" id="sci" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="sci_error"></h6>
+                    <label class="col-md-3 fs-2">Mathematics :</label>
+                    <div class="col-md-7">
+                        <input  class="form-control fs-2 border border-secondary"
+                            id="maths" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="math_error"></h6>
+                    <label class="col-md-3 fs-2">Computer :</label>
+                    <div class="col-md-7">
+                        <input  class="form-control fs-2 border border-secondary" id="comp" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="comp_error"></h6>
+                    <label class="col-md-3 fs-2">Login ID :</label>
+                    <div class="col-md-7">
+                        <input class="form-control fs-2 border border-secondary" id="l_id" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="l_id_error"></h6>
+                    <label class="col-md-3 fs-2">Password :</label>
+                    <div class="col-md-7">
+                        <input  type="password" class="form-control fs-2 border border-secondary"
+                            id="pass" />
+                            <br>
+                            <div class="text-end">
+                                    <button  class="btn btn-primary btn-sm" id="g_pass">Generate
+                                        Password</button>
+                               
+                            </div>
+                            <br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="password_error"></h6>
+                    <label class="col-md-3 fs-2">Confirm Password :</label>
+                    <div class="col-md-7">
+                        <input  type="text"
+                            class="form-control fs-2 border border-secondary" id="c_pass" /><br>
+                    </div>
+                    <h6 class="col-md-2 text-danger" id="pass_error"></h6>
+                    <div class=" offset-md-5 col-md-1">
+                        <button class="col fs-2 btn btn-primary text-light text-center"
+                            id="register">REGISTER</button><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="mysript.js" ></script>
+</body>
+
+</html>
